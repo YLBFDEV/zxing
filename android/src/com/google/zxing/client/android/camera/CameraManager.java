@@ -84,7 +84,10 @@ public final class CameraManager {
       camera = theCamera;
     }
     theCamera.setPreviewDisplay(holder);
-
+    // 设置预览方向。
+    // 注意：此设置不会影响到PreviewCallback回调、及其生成的Bitmap图片的数据方向，
+//    theCamera.setDisplayOrientation(90);
+    
     if (!initialized) {
       initialized = true;
       configManager.initFromCameraParameters(theCamera);
